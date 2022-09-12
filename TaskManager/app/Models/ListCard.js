@@ -17,7 +17,7 @@ export class ListCard {
     this.id = data.id || generateId()
     this.name = data.name
     this.color = data.color
-    this.totalTasks = 1
+    this.totalTasks = 0
   }
 
   get Template() {
@@ -36,7 +36,7 @@ export class ListCard {
             </form>
             </div>
             <div class="d-flex p-3">
-            <h5>${this.totalTasks}/</h5>
+            <h5>"TotalTasks"/</h5>
             <h5 class="" >${this.tasks.length} Tasks ToDo</h5>
           </div>
           </div>

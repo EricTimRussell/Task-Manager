@@ -13,8 +13,8 @@ export class Task {
     this.name = data.name
     this.listCardId = data.listCardId
     this.taskComplete = data.taskComplete || false
-    this.quantity = 1
-    this.taskTotal = this.quantity * 2
+    this.quantity = 0
+    // this.taskTotal = totalTasks on ListCard
   }
 
 
@@ -25,7 +25,6 @@ export class Task {
     <input type="checkbox" onchange="app.tasksController.toggleTaskComplete('${this.id}')" ${this.taskComplete ? 'checked' : ''}>
     <h5 class="selectable" onclick="app.tasksController.toggleTaskComplete('${this.id}')">${this.name}</h5><span class="mdi mdi-delete-forever-outline text-danger fs-4 selectable "
     onclick="app.tasksController.deleteTask('${this.id}')"></span>
-    <h5>${this.taskTotal}</h5>
     </div>
     `
   }
